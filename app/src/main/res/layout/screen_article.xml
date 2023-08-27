@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/btn_back_article"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:padding="12dp"
+                    android:src="@drawable/ic_back" />
+
+                <TextView
+                    android:id="@+id/tv_source_article"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/lexend_medium"
+                    android:text="motorsport.com"
+                    android:textAlignment="center"
+                    android:textSize="20sp" />
+
+                <Space
+                    android:layout_width="56dp"
+                    android:layout_height="56dp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_title_article"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/lexend_medium"
+                android:text="News Title"
+                android:textAlignment="center"
+                android:textSize="26sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/image_article_card"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="0dp"
+                android:layout_margin="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_title_article">
+
+                <ImageView
+                    android:id="@+id/image_article"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/img_placeholder" />
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/tv_author_article"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/lexend_medium"
+                android:text="By Pamela Someone"
+                android:textColor="#888888"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/image_article_card"
+                app:layout_constraintTop_toBottomOf="@+id/image_article_card" />
+
+            <TextView
+                android:id="@+id/tv_published_article"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/lexend_medium"
+                android:text="Published at ..."
+                android:textColor="#888888"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/tv_author_article"
+                app:layout_constraintTop_toBottomOf="@+id/tv_author_article" />
+
+            <TextView
+                android:id="@+id/tv_description_article"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:fontFamily="@font/lexend_medium"
+                android:text="News Description "
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_published_article" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:contentDescription="FAB"
+        android:src="@drawable/ic_favorite"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

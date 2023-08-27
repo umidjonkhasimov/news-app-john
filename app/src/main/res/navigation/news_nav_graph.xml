@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/news_nav_graph"
+    app:startDestination="@id/splashScreen">
+
+    <fragment
+        android:id="@+id/breakingNewsScreen"
+        android:name="uz.gita.newsapp_john.presentation.screens.allnews.HomeScreen"
+        android:label="BreakingNewsScreen">
+        <action
+            android:id="@+id/action_breakingNewsScreen_to_articleScreen"
+            app:destination="@id/articleScreen"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/savedNewsScreen"
+        android:name="uz.gita.newsapp_john.presentation.screens.saved.SavedNewsScreen"
+        android:label="SavedNewsScreen">
+        <action
+            android:id="@+id/action_savedNewsScreen_to_articleScreen"
+            app:destination="@id/articleScreen"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileScreen"
+        android:name="uz.gita.newsapp_john.presentation.screens.profile.ProfileScreen"
+        android:label="ProfileScreen">
+        <action
+            android:id="@+id/action_profileScreen_to_loginScreen"
+            app:destination="@id/loginScreen"
+            app:launchSingleTop="false"
+            app:popUpTo="@id/news_nav_graph"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_profileScreen_to_infoScreen"
+            app:destination="@id/infoScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/articleScreen"
+        android:name="uz.gita.newsapp_john.presentation.screens.article.ArticleScreen"
+        android:label="ArticleScreen">
+        <argument
+            android:name="article"
+            app:argType="uz.gita.newsapp_john.data.local.entity.ArticleEntity" />
+    </fragment>
+    <fragment
+        android:id="@+id/splashScreen"
+        android:name="uz.gita.newsapp_john.presentation.screens.splash.SplashScreen"
+        android:label="SplashScreen">
+        <action
+            android:id="@+id/action_splashScreen_to_breakingNewsScreen"
+            app:destination="@id/breakingNewsScreen"
+            app:popUpTo="@id/splashScreen"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splashScreen_to_loginScreen"
+            app:destination="@id/loginScreen"
+            app:popUpTo="@id/splashScreen"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginScreen"
+        android:name="uz.gita.newsapp_john.presentation.screens.login.LoginScreen"
+        android:label="LoginScreen">
+        <action
+            android:id="@+id/action_loginScreen_to_signUpScreen"
+            app:destination="@id/signUpScreen" />
+        <action
+            android:id="@+id/action_loginScreen_to_breakingNewsScreen"
+            app:destination="@id/breakingNewsScreen"
+            app:popUpTo="@id/loginScreen"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpScreen"
+        android:name="uz.gita.newsapp_john.presentation.screens.signup.SignUpScreen"
+        android:label="SignUpScreen">
+        <action
+            android:id="@+id/action_signUpScreen_to_breakingNewsScreen"
+            app:destination="@id/breakingNewsScreen"
+            app:popUpTo="@id/signUpScreen"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_signUpScreen_to_loginScreen"
+            app:destination="@id/loginScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/infoScreen"
+        android:name="uz.gita.newsapp_john.presentation.screens.info.InfoScreen"
+        android:label="InfoScreen" >
+        <argument
+            android:name="infoData"
+            app:argType="uz.gita.newsapp_john.data.model.InfoData" />
+    </fragment>
+</navigation>

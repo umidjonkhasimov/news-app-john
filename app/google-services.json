@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "306718337673",
+    "project_id": "newsapp-783ba",
+    "storage_bucket": "newsapp-783ba.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:306718337673:android:010ef1281eedd4727bf458",
+        "android_client_info": {
+          "package_name": "uz.gita.newsapp_john"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "306718337673-rg9gi6aeii26m67ss195binc4t7lpb0i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyANgX3KV0y6lTleBBQhuJMEKOZsvXBhTfo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "306718337673-rg9gi6aeii26m67ss195binc4t7lpb0i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

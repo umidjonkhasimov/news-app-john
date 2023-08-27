@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/shapeableImageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="80dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerInside"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/circleImageView"
+        app:srcCompat="@drawable/ic_avatar_placeholder" />
+
+    <TextView
+        android:id="@+id/name_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/lexend_medium"
+        android:text="Hello, "
+        android:textSize="22sp"
+        app:layout_constraintEnd_toStartOf="@+id/tv_name_profile"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/shapeableImageView" />
+
+    <TextView
+        android:id="@+id/tv_name_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lexend_medium"
+        android:text="John"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/name_profile"
+        app:layout_constraintTop_toTopOf="@+id/name_profile" />
+
+    <TextView
+        android:id="@+id/tv_post_count_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lexend_medium"
+        android:text="0"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/tv_follower_count_profile"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_follower_count_profile" />
+
+    <TextView
+        android:id="@+id/tv_follower_count_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/lexend_medium"
+        android:text="0"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/tv_following_count_profile"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tv_post_count_profile"
+        app:layout_constraintTop_toBottomOf="@+id/name_profile" />
+
+    <TextView
+        android:id="@+id/tv_following_count_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lexend_medium"
+        android:text="0"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tv_follower_count_profile"
+        app:layout_constraintTop_toTopOf="@+id/tv_follower_count_profile" />
+
+    <TextView
+        android:id="@+id/tv_post_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lexend_medium"
+        android:text="Posts"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/tv_follower_count_profile"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_post_count_profile" />
+
+    <TextView
+        android:id="@+id/tv_follower_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lexend_medium"
+        android:text="Followers"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/tv_following_count_profile"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tv_post_count_profile"
+        app:layout_constraintTop_toBottomOf="@+id/tv_follower_count_profile" />
+
+    <TextView
+        android:id="@+id/tv_following_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lexend_medium"
+        android:text="Following"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tv_follower_count_profile"
+        app:layout_constraintTop_toBottomOf="@+id/tv_following_count_profile" />
+
+    <TextView
+        android:id="@+id/terms_profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="64dp"
+        android:background="?selectableItemBackground"
+        android:drawablePadding="12dp"
+        android:fontFamily="@font/lexend_medium"
+        android:padding="16dp"
+        android:text="Terms &amp; Conditions"
+        android:textSize="18sp"
+        app:drawableEndCompat="@drawable/baseline_arrow_forward_ios_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_follower_profile" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:background="#777"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/terms_profile" />
+
+    <TextView
+        android:id="@+id/privacy_profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp"
+        android:background="?selectableItemBackground"
+        android:drawablePadding="12dp"
+        android:fontFamily="@font/lexend_medium"
+        android:padding="16dp"
+        android:text="Privacy &amp; Policy"
+        android:textSize="18sp"
+        app:drawableEndCompat="@drawable/baseline_arrow_forward_ios_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:background="#777"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/privacy_profile" />
+
+    <TextView
+        android:id="@+id/logout_profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:background="?selectableItemBackground"
+        android:drawablePadding="12dp"
+        android:fontFamily="@font/lexend_medium"
+        android:padding="16dp"
+        android:text="Log out"
+        android:textColor="@color/seed"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view1" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

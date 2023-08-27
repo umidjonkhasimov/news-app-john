@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/breakingNewsScreen"
+        android:icon="@drawable/ic_news"
+        android:title="Breaking News" />
+
+    <item
+        android:id="@+id/savedNewsScreen"
+        android:icon="@drawable/ic_favorite"
+        android:title="Saved news" />
+
+    <item
+        android:id="@+id/profileScreen"
+        android:icon="@drawable/ic_all_news"
+        android:title="Profile" />
+
+</menu>
